@@ -77,11 +77,59 @@
       margin: 15px 0;
     }
 
-    .project-card {
-      background: #222;
-      padding: 20px;
-      border-left: 5px solid #FFD700;
-    }
+    .projects-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #facc15; /* Gold */
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.project {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project h3 {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  color: #facc15;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-top: 10px;
+}
+
+    
 
     footer {
       background: #111;
@@ -105,7 +153,7 @@
 
   <section class="intro" id="home">
     <h1>Hi, I'm Sidra-Tul-Muntaha</h1>
-    <p>Aspiring Data Analyst | Mathematics Undergraduate | Excel & Python Enthusiast</p>
+    <p>Aspiring Data Analyst | Mathematics Undergraduate | Excel & Python Enthusiast | Web Developer </p>
     <a href="#projects"><button class="btn">My Projects</button></a>
     <a href="#contact"><button class="btn">Contact Me</button></a>
   </section>
@@ -125,21 +173,27 @@
     </div>
   </section>
 
-  <section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Daily Brew</h3>
-      <p>A coffee shop website built with HTML & CSS, showcasing responsive design and a clean layout.</p>
-    </div>
-    <div class="project-card">
-      <h3>Savour Sip Restaurant</h3>
-      <p>A modern restaurant website project that combines elegant design with usability to promote a brand online.</p>
-    </div>
-    <div class="project-card">
-      <h3>Excel Analyzer Pro</h3>
-      <p>An Excel-based analysis tool with advanced dashboard capabilities, automated calculations, and interactive reports.</p>
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-grid">
+      <div class="project" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Daily Brew">
+        <h3>Daily Brew Coffee Website</h3>
+        <p>An elegant coffee shop website with responsive design.</p>
+      </div>
+      <div class="project" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80" alt="Savour Sip">
+        <h3>Savour Sip Restaurant</h3>
+        <p>A modern and mobile-friendly restaurant platform.</p>
+      </div>
+      <div class="project" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAwxNcp_8o6CXTiqO8fTVR6tO2jLDR0RBwVw&s" alt="Excel Analyzer Pro">
+        <h3>Excel Analyzer Pro</h3>
+        <p>Automates Excel analysis using Python and advanced Excel features.</p>
+      </div>
     </div>
   </section>
+  
 
   <section class="section" id="contact">
     <h2>Contact</h2>
