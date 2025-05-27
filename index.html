@@ -73,9 +73,58 @@
       margin-bottom: 20px;
     }
 
-    .skills div, .project-card {
-      margin: 15px 0;
-    }
+    .skills-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-section .section-title {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.skill-card {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 1.25rem;
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+    
 
     .projects-section {
   background-color: #000;
@@ -138,6 +187,8 @@
       margin-top: 50px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -163,15 +214,32 @@
     <p>I’m Sidra-Tul-Muntaha, a passionate Mathematics student at BZU with a strong interest in data analytics, front-end web development, and automation using Python and Excel. I enjoy exploring the intersection of numbers and technology, building insightful dashboards, and working on creative problem-solving projects. My goal is to contribute to impactful solutions that blend logic and design.</p>
   </section>
 
-  <section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div><strong>Excel:</strong> Advanced formulas, dashboards, pivot tables</div>
-      <div><strong>Python:</strong> Data analysis, OOP, automation</div>
-      <div><strong>HTML & CSS:</strong> Responsive website design</div>
-      <div><strong>Data Analysis:</strong> Extracting insights from datasets</div>
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-aos="flip-left">
+        <i class="fas fa-code"></i>
+        <h3>Python</h3>
+        <p>Object-oriented programming, automation, and data analysis with Python.</p>
+      </div>
+      <div class="skill-card" data-aos="flip-left">
+        <i class="fas fa-table"></i>
+        <h3>Excel</h3>
+        <p>Advanced Excel, pivot tables, macros, and dynamic dashboards.</p>
+      </div>
+      <div class="skill-card" data-aos="flip-left">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5 & CSS3</h3>
+        <p>Responsive and semantic web design using HTML and CSS.</p>
+      </div>
+      <div class="skill-card" data-aos="flip-left">
+        <i class="fas fa-database"></i>
+        <h3>Data Analysis</h3>
+        <p>Data cleaning, visualization, and insights extraction.</p>
+      </div>
     </div>
   </section>
+  
 
   <section id="projects" class="projects-section">
     <h2 class="section-title">My Projects</h2>
